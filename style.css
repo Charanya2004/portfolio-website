@@ -1,0 +1,344 @@
+/* Resetting some basic styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    line-height: 1.6;
+    color: #333;
+    background: #f7f9fc;
+}
+
+/* Header */
+header {
+    background: linear-gradient(120deg, #8a2be2, #6495ed); /* Gradient background */
+    padding: 2rem 0;
+    position: relative;
+}
+
+.header-container {
+    display: flex;
+    flex-direction: column; /* Stack logo and nav vertically */
+    align-items: center; /* Center the items */
+    position: relative; /* For decoration positioning */
+}
+
+.logo {
+    font-size: 2.5rem; /* Adjusted size */
+    color: #ffcc00; /* Logo color */
+    font-weight: 700;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2); /* Add shadow to logo */
+    margin-bottom: 1rem; /* Spacing between logo and nav */
+}
+
+nav {
+    position: relative; /* Position for decorative effects */
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    gap: 2rem; /* Spacing between menu items */
+}
+
+nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: 600;
+    position: relative;
+    padding: 0.5rem 0; /* Padding for click area */
+}
+
+nav ul li a::after {
+    content: '';
+    display: block;
+    height: 3px;
+    background: #ffcc00; /* Decoration color */
+    width: 0;
+    transition: width 0.3s; /* Animation effect */
+    position: absolute;
+    bottom: -5px; /* Position the decoration below the text */
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+nav ul li a:hover::after {
+    width: 100%; /* Expand the decoration on hover */
+}
+
+/* Decorative Circles */
+.header-container::before,
+.header-container::after {
+    content: '';
+    position: absolute;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.2); /* Light semi-transparent white */
+}
+
+.header-container::before {
+    width: 150px; /* Adjust circle size */
+    height: 150px; /* Adjust circle size */
+    top: 10%; /* Positioning from the top */
+    left: 10%; /* Positioning from the left */
+}
+
+.header-container::after {
+    width: 100px; /* Adjust circle size */
+    height: 100px; /* Adjust circle size */
+    bottom: 10%; /* Positioning from the bottom */
+    right: 10%; /* Positioning from the right */
+}
+
+
+
+/* Hero Section */
+.hero {
+    background: linear-gradient(120deg, #8a2be2, #6495ed);
+    padding: 5rem 2rem;
+    text-align: center;
+    color: #fff;
+}
+
+.hero h1 {
+    font-size: 3rem;
+}
+
+.hero h1 span {
+    color: #ffcc00;
+}
+
+.hero .tagline {
+    font-size: 1.2rem;
+    margin-top: 1rem;
+}
+
+/* About Section */
+.about {
+    padding: 4rem 2rem;
+    background: #fff;
+    text-align: center;
+}
+
+.about h2 {
+    font-size: 2.5rem;
+    color: #202746;
+}
+
+.about p {
+    margin-top: 1rem;
+    font-size: 1.1rem;
+    color: #555;
+}
+
+/* Skills Section */
+.skills {
+    background: #f0f4f8;
+    padding: 4rem 2rem;
+    text-align: center;
+}
+
+.skills h2 {
+    font-size: 2.5rem;
+    color: #202746;
+}
+
+.skills-container {
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    margin-top: 2rem;
+}
+
+.skill-item {
+    background: #202746;
+    color: #fff;
+    padding: 1rem 2rem;
+    border-radius: 8px;
+    font-weight: 600;
+}
+
+/* Project Section */
+.project-section {
+    background: #202746; /* Dark background for contrast */
+    color: #fff; /* White text for visibility */
+    padding: 3rem 1rem;
+    text-align: center;
+}
+
+.project-section h2 {
+    font-size: 2.5rem; /* Size of the heading */
+    margin-bottom: 2rem; /* Space below heading */
+    position: relative;
+}
+
+.project-section h2::after {
+    content: '';
+    display: block;
+    height: 3px;
+    width: 50px; /* Decoration line length */
+    background: #ffcc00; /* Decoration line color */
+    margin: 0.5rem auto; /* Centering the decoration line */
+}
+
+.project-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center; /* Center the project cards */
+    gap: 2rem; /* Space between project cards */
+}
+
+.project-card {
+    background: rgba(255, 255, 255, 0.1); /* Semi-transparent background */
+    border-radius: 10px; /* Rounded corners */
+    overflow: hidden; /* Hide overflow */
+    width: 300px; /* Fixed width for cards */
+    transition: transform 0.3s; /* Animation for hover effect */
+    position: relative; /* For absolute positioning of overlay */
+    display: flex; /* Enable flexbox */
+    flex-direction: column; /* Align children vertically */
+    align-items: center; /* Center items horizontally */
+    text-align: center; /* Center text */
+}
+
+.project-card:hover {
+    transform: scale(1.05); /* Scale up on hover */
+}
+
+.project-card img {
+    width: 100%; /* Full width image */
+    height: 200px; /* Fixed height for images */
+    object-fit: cover; /* Cover the area */
+}
+
+.project-info {
+    padding: 1rem; /* Inner spacing */
+    flex-grow: 1; /* Allow the info section to grow */
+    display: flex; /* Enable flexbox */
+    flex-direction: column; /* Align children vertically */
+    justify-content: center; /* Center content vertically */
+    align-items: center; /* Center items horizontally */
+}
+
+.project-info h3 {
+    font-size: 1.5rem; /* Title size */
+    margin: 0.5rem 0; /* Margin for title */
+}
+
+.project-info p {
+    font-size: 0.9rem; /* Description size */
+    color: #bbb; /* Gray color for description */
+    margin-bottom: 1rem; /* Space below description */
+}
+
+.view-button {
+    display: inline-block;
+    background-color: #ffcc00; /* Button background color */
+    color: #202746; /* Button text color */
+    padding: 0.5rem 1rem; /* Button padding */
+    border-radius: 5px; /* Rounded button */
+    text-decoration: none; /* No underline */
+    transition: background 0.3s; /* Transition effect */
+}
+
+.view-button:hover {
+    background-color: #e6b800; /* Darker shade on hover */
+}
+
+
+/* Contact Section */
+.contact-section {
+    background: #202746; /* Dark background for contrast */
+    color: #fff; /* White text for visibility */
+    padding: 3rem 1rem; /* Padding around the section */
+    text-align: center; /* Center the text */
+}
+
+.contact-section h2 {
+    font-size: 2.5rem; /* Size of the heading */
+    margin-bottom: 2rem; /* Space below heading */
+    position: relative;
+}
+
+.contact-section h2::after {
+    content: '';
+    display: block;
+    height: 3px;
+    width: 50px; /* Decoration line length */
+    background: #ffcc00; /* Decoration line color */
+    margin: 0.5rem auto; /* Centering the decoration line */
+}
+
+.contact-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Center items in column */
+}
+
+.contact-info {
+    display: flex;
+    justify-content: center; /* Center the items horizontally */
+    flex-wrap: wrap; /* Allow wrapping to next line on smaller screens */
+    gap: 1.5rem; /* Spacing between contact items */
+    max-width: 1200px; /* Maximum width to contain items */
+    margin: 0 auto; /* Center the contact info */
+}
+
+.contact-item {
+    background: rgba(255, 255, 255, 0.1); /* Light background for contact items */
+    border-radius: 10px; /* Rounded corners */
+    padding: 1rem; /* Inner spacing */
+    width: 200px; /* Fixed width for items */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* Add some shadow for depth */
+    overflow: hidden; /* Prevent content overflow */
+    text-align: center; /* Center text inside the box */
+}
+
+.contact-item h3 {
+    font-size: 1.2rem; /* Reduced heading size */
+    margin-bottom: 0.5rem; /* Space below heading */
+}
+
+.contact-item p {
+    font-size: 0.9rem; /* Adjusted font size for better fit */
+    margin: 0; /* Remove default margin */
+    white-space: normal; /* Allow wrapping */
+    word-wrap: break-word; /* Break long words */
+}
+
+.contact-item a {
+    color: #ffffff; /* Set color to white for links */
+    text-decoration: none; /* Remove underline */
+}
+
+.contact-button {
+    margin-top: 2rem; /* Space above button */
+}
+
+.contact-button a {
+    background: #ffcc00; /* Button background color */
+    color: #202746; /* Button text color */
+    padding: 1rem 2rem; /* Button padding */
+    border-radius: 5px; /* Rounded button */
+    text-decoration: none; /* No underline */
+    font-weight: bold; /* Bold text */
+    transition: background 0.3s; /* Transition effect for hover */
+}
+
+.contact-button a:hover {
+    background: #e6b800; /* Darker shade on hover */
+}
+
+
+/* Footer */
+footer {
+    background: #202746;
+    color: #fff;
+    text-align: center;
+    padding: 1rem 0;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+}

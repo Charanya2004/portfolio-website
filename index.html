@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Charanya R - Portfolio</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Header Section -->
+    <header>
+        <div class="header-container">
+            <nav>
+                <ul>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#projects">Projects</a></li>
+                    <li><a href="#contact">Connect</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    
+    
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-content">
+            <h1>Hi there! I'm <span>CHARANYA R</span></h1>
+            <p class="tagline">Graphic Designer | Machine Learning Enthusiast</p>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="about">
+        <div class="container">
+            <h2>About Me</h2>
+            <p>I am a self-driven, diligent, and optimistic student in my final year of pursuing a B.Tech in Computer Science & Engineering. I am eager to explore career opportunities that allow me to enhance my expertise as a Computer Science undergraduate and continue to develop my skills as a valuable professional. Currently working as a UI/UX Designer, I have also gained experience through projects in Machine Learning. My goal is to find fulfillment in both learning and contributing to impactful work.</p>
+        </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section id="skills" class="skills">
+        <div class="container">
+            <h2>Skill Set</h2>
+            <div class="skills-container">
+                <div class="skill-item">UI/UX Designing</div>
+                <div class="skill-item">Web Designing</div>
+                <div class="skill-item">Computer Vision</div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Project Section -->
+    <section id="projects" class="project-section">
+        <h2>My Projects</h2>
+        <div class="project-container">
+            <div class="project-card">
+                <img src="images/fashionhub.png" alt="Project 1">
+                <div class="project-info">
+                    <h3>Fashion Hub <span>UI/UX</span></h3>
+                    <p>FashionHub is a cutting-edge e-commerce app that allows users to shop for clothing with an immersive, virtual try-on experience powered by Augmented Reality (AR). The app provides a seamless shopping journey, enabling users to visualize how clothes will look on them before making a purchase.</p>
+                    <a href="https://www.behance.net/gallery/208862139/Fashion-Hub" target="_blank" class="view-button">View Project</a>
+                </div>
+            </div>
+            <div class="project-card">
+                <img src="images/booknest.png" alt="Project 2">
+                <div class="project-info">
+                    <h3>BookNest <span>UI/UX</span></h3>
+                    <p>BookNest is an app similar to Kindle, but with added features. It not only offers a vast library of eBooks but also includes audiobooks for users who prefer listening. Additionally, it provides detailed author information, allowing readers to explore biographies, works, and insights about the authors.</p>
+                    <a href="https://www.behance.net/gallery/202993695/BookNest" target="_blank" class="view-button">View Project</a>
+                </div>
+            </div>
+            <div class="project-card">
+                <img src="images/ntc.png" alt="Project 2">
+                <div class="project-info">
+                    <h3>Crescent NTC Club Website <span>OpenCV</span></h3>
+                    <p>Developed a responsive website for my college's Neural Techgenix Club, featuring a modern design with an image carousel, blog section, and seamless user registration integration</p>
+                    <a href="https://neural-techgenix-club.vercel.app/" target="_blank" class="view-button">View Project</a>
+                </div>
+            </div>
+            <div class="project-card">
+                <img src="images/sentiment.png" alt="Project 2">
+                <div class="project-info">
+                    <h3>Sentiment Analysis Tool <span>Flask and BERT Model</span></h3>
+                    <p>It is a web application that scrapes and analyzes customer reviews from URLs using Python, Flask, and BeautifulSoup.Implemented sentiment analysis using a pre-trained BERT model to classify reviews as positive, negative, or neutral.</p>
+                    <a href="https://github.com/Charanya2004/computer-vision/tree/main/sentimentanalysis" target="_blank" class="view-button">View Project</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact-section">
+        <h2>Let’s talk</h2>
+        <div class="contact-container">
+            <div class="contact-info">
+                <div class="contact-item">
+                    <h3>Email</h3>
+                    <p>rcharan2025@gmail.com</p>
+                </div>
+                <div class="contact-item">
+                    <h3>Phone</h3>
+                    <p>9884222578</p>
+                </div>
+                <div class="contact-item">
+                    <h3>Behance</h3>
+                    <p><a href="https://behance.net/charanramkuma1" target="_blank">charanramkuma1</a></p>
+                </div>
+                <div class="contact-item">
+                    <h3>LinkedIn</h3>
+                    <p><a href="https://linkedin.com/in/charanya-r-1956b8247/" target="_blank">Charanya R</a></p>
+                </div>
+            </div>
+            <div class="contact-button">
+                <a href="mailto:rcharan2025@gmail.com">Contact Me</a>
+            </div>
+        </div>
+    </section>
+    
+
+
+    <!-- Footer Section -->
+    <footer>
+        <p>&copy; Copyright CharanyaR. All Rights Reserved.</p>
+    </footer>
+
+    <script>
+        // Select all anchor links
+        const smoothScrollLinks = document.querySelectorAll('a[href^="#"]');
+    
+        // Loop through each link
+        smoothScrollLinks.forEach(link => {
+            link.addEventListener('click', function (e) {
+                e.preventDefault(); // Prevent the default anchor behavior
+    
+                const targetId = this.getAttribute('href'); // Get the target section ID
+                const targetSection = document.querySelector(targetId); // Find the target section
+    
+                // Scroll to the target section
+                targetSection.scrollIntoView({
+                    behavior: 'smooth' // Use smooth scroll behavior
+                });
+            });
+        });
+    </script>
+    
+</body>
+</html>
